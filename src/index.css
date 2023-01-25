@@ -13,6 +13,10 @@ body {
   scroll-behavior: smooth;
 }
 
+.headh{
+  height:  calc(100vh -10%);
+}
+
 .dmser{
   font-family: 'DM Serif Display';
 }

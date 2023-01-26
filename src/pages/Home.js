@@ -1,6 +1,7 @@
 import avatar from '../assets/hp-ai-clr.gif'
 import stik from '../assets/stik.svg'
 import bg from '../assets/bg.webp'
+import bgmob from '../assets/bg-mob.webp'
 import fram from '../assets/frame.svg'
 import '../index.css'
 
@@ -10,7 +11,8 @@ const Home = () => {
     return(
 
         <div className='text-white overflow-x-hidden'>
-            <img className='absolute -mt-16 md:mt-0 select-none pointer-events-none h-screen object-contain bottt w-screen m-auto bg-cover' alt='' src={bg} />
+            <img className='pc absolute md:mt-0 select-none pointer-events-none h-screen object-contain bottt w-screen m-auto bg-cover' alt='' src={bg} />
+            <img className='mob absolute md:mt-0 select-none pointer-events-none h-screen object-contain bottt w-screen m-auto bg-cover' alt='' src={bgmob} />
 
             <div id='hero' className='h-screen relative'>   
                 {/*<img className=' absolute rotate-45 w-[15rem] -top-1/5' alt='' src={fram} /> */}
@@ -18,9 +20,9 @@ const Home = () => {
                     <h1 className="text-center dmser text-[3rem] md:text-[4rem] leading-tight text-white">Hari Prasad</h1>
                     <p className='text-center rale font-light tracking-wide text-sm md:text-lg text-slate-400 mt-3'>Artist • Designer • Developer</p>
                 </div>
-                <div className='absolute bottom-7'>
+                <div className='absolute bottom-9 md:bottom-0'>
                     <a href='#about'><img className='m-auto border-white border-4 select-none grayscale hover:filter-none rounded-full w-[8rem] md:w-[7rem] scaleup' alt='' src={avatar} /></a>
-                    <img className='m-auto  w-screen h-12 md:h-auto opacity-80' alt='' src={stik} />
+                    <img className='m-auto  w-screen h-12 md:h-auto ' alt='' src={stik} />
                 </div>
             </div>
 

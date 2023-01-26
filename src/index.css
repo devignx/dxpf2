@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {  
   margin: 0;
   padding: 0;
@@ -11,10 +10,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #0B0D13;
   scroll-behavior: smooth;
-}
-
-.headh{
-  height:  calc(100vh -10%);
 }
 
 .dmser{

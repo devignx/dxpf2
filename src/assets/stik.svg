@@ -1,16 +1,21 @@
 <svg width="1728" height="171" viewBox="0 0 1728 171" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M854.5 62C247.303 62 0 171 0 171H1728C1728 171 1461.7 62 854.5 62Z" fill="url(#paint0_radial_421_83)"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M831.13 91.9934C829.079 87.9543 826.006 86.7218 824.266 89.2404C822.525 91.7591 822.777 97.0751 824.828 101.114L849.934 150.56C851.451 153.548 853.527 155 855.21 154.534C856.892 155 858.969 153.548 860.486 150.56L885.592 101.114C887.643 97.0753 887.895 91.7593 886.155 89.2406C884.414 86.722 881.341 87.9545 879.29 91.9936L855.21 139.419L831.13 91.9934Z" fill="url(#paint1_linear_421_83)" fill-opacity="0.63"/>
 <path d="M863.032 4L854.492 61.6442" stroke="white" stroke-width="6.93865" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M861.605 17.8645L886.711 32.7059" stroke="white" stroke-width="6.93865" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M857.335 61.5379L882.441 90.9999" stroke="white" stroke-width="6.93865" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M832.249 32.7059L857.355 17.8645" stroke="white" stroke-width="6.93865" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M827.979 91L853.085 61.538" stroke="white" stroke-width="6.93865" stroke-linecap="round" stroke-linejoin="round"/>
 <defs>
-<radialGradient id="paint0_radial_421_83" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(858.5 62) rotate(90) scale(100.5 2057.62)">
+<radialGradient id="paint0_radial_421_83" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(858.5 62) rotate(90) scale(100.5 858.5)">
 <stop stop-color="#D4DFFF"/>
 <stop offset="0.153949" stop-color="#7D9DFF"/>
 <stop offset="0.304994" stop-color="#4467D1" stop-opacity="0.84"/>
 <stop offset="1" stop-opacity="0"/>
 </radialGradient>
+<linearGradient id="paint1_linear_421_83" x1="855.21" y1="87.9689" x2="855.21" y2="104.139" gradientUnits="userSpaceOnUse">
+<stop stop-opacity="0.41"/>
+<stop offset="1" stop-opacity="0.13"/>
+</linearGradient>
 </defs>
 </svg>

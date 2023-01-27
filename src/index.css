@@ -2,7 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-html {scroll-behavior: smooth;}
+html {
+  scroll-behavior: smooth;
+  transition: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 300ms;
+}
 
 html img{
   user-select: none;
@@ -24,6 +29,16 @@ body {
 
 .rale{
   font-family: 'Raleway';
+}
+
+.centerh{      
+  left: 50%;                        
+  transform: translate(-50%, 0)
+}
+
+.centerv{      
+  top: 50%;                        
+  transform: translate(0, -50%)
 }
 
 ::-moz-selection {
@@ -91,11 +106,11 @@ body {
 }
 
 .scaleup{
-  transition: scale 0.2s;
+  transition: scale 0.5s;
   transition-timing-function: ease-in-out;
 }
 .scaleup:hover{
-  scale: 105%;
+  scale: 101%;
 }
 
 abbr[title] {

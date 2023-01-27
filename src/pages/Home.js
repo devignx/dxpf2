@@ -6,6 +6,7 @@ import fram from '../assets/frame.svg'
 import '../index.css'
 import { motion } from 'framer-motion'
 import divi from '../assets/divi.svg'
+import divid from '../assets/divi-d.svg'
 
 
 const Home = () => {
@@ -21,7 +22,8 @@ const Home = () => {
                 whileTap={{x:0, y:0, scale:1}}
                 whileHover={{x:0, y:0, scale:1}}
                 transition={{ duration: 0.4, type:'spring'}}
-                className='fixed toppp flex flex-col dmser tracking-wide py-12 pr-24 pl-16 mt-4 gap-6 top-8 mix-blend-difference right-0 hover:-right-2 rounded-2xl bg-white/[.08] hover:bg-white/[.03] text-slate-400 backdrop-blur-2xl drop-shadow-xl'>
+                exit={{duration:1.5}}
+                className='fixed toppp flex flex-col dmser tracking-wide py-12 pr-24 pl-16 mt-4 gap-6 top-8 mix-blend-difference right-0 hover:-right-2 rounded-2xl bg-white/[.08] hover:bg-white/[.03] text-slate-400 backdrop-blur-2xl border-white/10 border-solid border-[0.6px] drop-shadow-xl'>
                 <a href='#home' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>H</span>ome</a>
                 <a href='#about' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>A</span>bout</a>
                 <a href='#recent' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>R</span>ecent</a>
@@ -46,7 +48,7 @@ const Home = () => {
             whileInView={{opacity:1}}
             transition={{duration:0.4}}
             className='relative h-screen w-full mt-[10%] pt-12'>
-                <h1 className="text-center text-white uppercase text-center font-bold text-2xl md">About</h1>
+                <a href='#about' className="text-center text-white uppercase block font-black text-2xl md">About</a>
                 <p className='font-light m-auto rale tracking-wide text-sm text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>
                     Lorem ipsum dolor sit amet, consectetur consecteturconsectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid
                 </p>
@@ -54,55 +56,54 @@ const Home = () => {
                 <motion.img
                 initial={{y:50, opacity:0}}
                 whileInView={{ y:0, opacity:0.95 }}
-                transition={{duration:0.3}}
+                transition={{duration:0.4}}
                 viewport={{once:false}}
                 className='w-[3rem] md:w-[10rem] opacity-[0.95] absolute bottom-0 right-0' src={divi}/>
 
                 <motion.img
                 initial={{y:50,rotateY:180, opacity:0}}
                 whileInView={{ y:0, opacity:0.95 }}
-                transition={{duration:0.3}}
+                transition={{duration:0.4}}
                 viewport={{once:false}}
                 className='w-[3rem] md:w-[10rem] opacity-[0.95] absolute bottom-0 left-0' src={divi}/>
             </motion.div>
 
 
-            <div id='recent'
+            <motion.div id='recent'
             initial={{opacity:0.2}}
-            whileInView={{opacity:.5}}
-            transition={{duration:1}}
+            whileInView={{opacity:1}}
+            transition={{duration:0.4}}
             className='h-screen relative w-full bg-white/[0.95] text-black pt-12'>
-                <h1 className="text-center uppercase text-center font-bold text-2xl md">Recent Projects</h1>
-                <p className='font-light m-auto rale tracking-wide text-sm text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>
+                <a href='#recent' className="text-center text-black uppercase block font-black text-2xl md">Recent Projects</a>
+                <p className='font-light m-auto rale font-medium tracking-wide text-sm text-slate-600 mt-4 w-10/12 md:w-[68%] text-center'>
                     Lorem ipsum dolor sit amet, consectetur consecteturconsectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid
                 </p>
 
                 <motion.img
                 initial={{y:50, opacity:0}}
-                whileInView={{ y:0, opacity:0.95 }}
-                transition={{duration:0.3}}
+                whileInView={{ y:0, opacity:1 }}
+                transition={{duration:0.4}}
                 viewport={{once:false}}
-                className='w-[3rem] md:w-[10rem] mix-blend-difference opacity-[0.95] absolute bottom-0 right-0' src={divi}/>
+                className='w-[3rem] md:w-[10rem]  absolute bottom-0 right-0' src={divid}/>
 
                 <motion.img
                 initial={{y:50,rotateY:180, opacity:0}}
-                whileInView={{ y:0, opacity:0.95 }}
-                transition={{duration:0.3}}
+                whileInView={{ y:0, opacity:1 }}
+                transition={{duration:0.4}}
                 viewport={{once:false}}
-                className='w-[3rem] md:w-[10rem] mix-blend-difference opacity-[0.95] absolute bottom-0 left-0' src={divi}/>
-            </div>
+                className='w-[3rem] md:w-[10rem]  absolute bottom-0 left-0' src={divid}/>
+            </motion.div>
             
 
-            <div id='info'
+            <motion.div id='info'
             initial={{opacity:0.2}}
             whileInView={{opacity:1}}
-            transition={{duration:0.4}}
             className='h-screen w-full pt-12'>
-                <h1 className="text-center text-white uppercase text-center font-bold text-2xl md">Info</h1>
+                <a href='#info' className="text-center text-white uppercase block font-black text-2xl md">Info</a>
                 <p className='font-light m-auto rale tracking-wide text-sm text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>
                     Lorem ipsum dolor sit amet, consectetur consecteturconsectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid
                 </p>
-            </div>
+            </motion.div>
         </div>
     )
 }

@@ -9,7 +9,22 @@ import divi from '../assets/divi.svg'
 import divid from '../assets/divi-d.svg'
 
 
+import sande from '../assets/card/proj (1).webp'
+import vongo from '../assets/card/proj (2).webp'
+import betfeed from '../assets/card/proj (3).webp'
+import dx from '../assets/card/proj (4).webp'
+
+import Cards from '../components/Cards'
+
+
 const Home = () => {
+
+    const card = [
+        {"img":sande,"title":"SandE","desc":"Hello", "live":"https://"},
+        {"img":vongo,"title":"Vongo","desc":"Vongo.ai is a library of Audiobooks, Videos, PDFs and so many useful resources for Medical Students studying under Incus.inc organisation", "live":"https://vongo.ai"},
+        {"img":betfeed,"title":"Betterfeeds","desc":"Hello", "live":"https://betterfeeds.vercel.app"},
+        {"img":dx,"title":"DevignX","desc":"Hello", "live":"https://"},
+    ]
 
     return(
 
@@ -23,7 +38,7 @@ const Home = () => {
                 whileHover={{x:0, y:0, scale:1}}
                 transition={{ duration: 0.4, type:'spring'}}
                 exit={{duration:1.5}}
-                className='fixed toppp flex flex-col dmser tracking-wide py-12 pr-24 pl-16 mt-4 gap-6 top-8 mix-blend-difference right-0 hover:-right-2 rounded-2xl bg-white/[.08] hover:bg-white/[.03] text-slate-400 backdrop-blur-2xl border-white/10 border-solid border-[0.6px] drop-shadow-xl'>
+                className='pc fixed toppp flex flex-col dmser tracking-wide py-12 pr-24 pl-16 mt-4 gap-6 top-8 mix-blend-difference right-0 hover:-right-2 rounded-2xl bg-white/[.08] hover:bg-white/[.03] text-slate-400 backdrop-blur-2xl border-white/10 border-solid border-[0.6px] drop-shadow-xl'>
                 <a href='#home' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>H</span>ome</a>
                 <a href='#about' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>A</span>bout</a>
                 <a href='#recent' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>R</span>ecent</a>
@@ -42,11 +57,10 @@ const Home = () => {
                 </div>
             </div>
 
-
             <motion.div id='about'
             initial={{opacity:0.2}}
             whileInView={{opacity:1}}
-            transition={{duration:0.4}}
+            transition={{duration:0.7}}
             className='relative h-screen w-full mt-[10%] pt-12'>
                 <a href='#about' className="text-center text-white uppercase block font-black text-2xl md">About</a>
                 <p className='font-light m-auto rale tracking-wide text-sm text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>
@@ -56,14 +70,14 @@ const Home = () => {
                 <motion.img
                 initial={{y:50, opacity:0}}
                 whileInView={{ y:0, opacity:0.95 }}
-                transition={{duration:0.4}}
+                transition={{duration:0.7}}
                 viewport={{once:false}}
                 className='w-[3rem] md:w-[10rem] opacity-[0.95] absolute bottom-0 right-0' src={divi}/>
 
                 <motion.img
                 initial={{y:50,rotateY:180, opacity:0}}
                 whileInView={{ y:0, opacity:0.95 }}
-                transition={{duration:0.4}}
+                transition={{duration:0.7}}
                 viewport={{once:false}}
                 className='w-[3rem] md:w-[10rem] opacity-[0.95] absolute bottom-0 left-0' src={divi}/>
             </motion.div>
@@ -72,24 +86,32 @@ const Home = () => {
             <motion.div id='recent'
             initial={{opacity:0.2}}
             whileInView={{opacity:1}}
-            transition={{duration:0.4}}
+            transition={{duration:0.7}}
             className='h-screen relative w-full bg-white/[0.95] text-black pt-12'>
-                <a href='#recent' className="text-center text-black uppercase block font-black text-2xl md">Recent Projects</a>
+                <a href='#recent' className="text-center text-black uppercase block font-black text-2xl my-4 md">Recent Projects</a>
                 <p className='font-light m-auto rale font-medium tracking-wide text-sm text-slate-600 mt-4 w-10/12 md:w-[68%] text-center'>
                     Lorem ipsum dolor sit amet, consectetur consecteturconsectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid
                 </p>
 
+                <section className='overflow-y-scroll mt-6 md:mt-12 px-0 md:p-4 h-1/2 md:h-2/3 w-11/12 md:w-1/2 m-auto'>
+                        {
+                            card.map((card, index) => {
+                                return <Cards key={index} desc={card.desc} title={card.title} live={card.live} repo={card.repo}/>
+                            })
+                        }
+                </section>
+
                 <motion.img
-                initial={{y:50, opacity:0}}
-                whileInView={{ y:0, opacity:1 }}
-                transition={{duration:0.4}}
+                initial={{y:50}}
+                whileInView={{ y:0}}
+                transition={{duration:0.7}}
                 viewport={{once:false}}
                 className='w-[3rem] md:w-[10rem]  absolute bottom-0 right-0' src={divid}/>
 
                 <motion.img
-                initial={{y:50,rotateY:180, opacity:0}}
-                whileInView={{ y:0, opacity:1 }}
-                transition={{duration:0.4}}
+                initial={{y:50,rotateY:180}}
+                whileInView={{ y:0,rotateY:180}}
+                transition={{duration:0.7}}
                 viewport={{once:false}}
                 className='w-[3rem] md:w-[10rem]  absolute bottom-0 left-0' src={divid}/>
             </motion.div>
@@ -98,8 +120,9 @@ const Home = () => {
             <motion.div id='info'
             initial={{opacity:0.2}}
             whileInView={{opacity:1}}
+            transition={{duration:0.7}}
             className='h-screen w-full pt-12'>
-                <a href='#info' className="text-center text-white uppercase block font-black text-2xl md">Info</a>
+                <a href='#info' className="text-center text-white uppercase block my-4 font-black text-2xl md">Info</a>
                 <p className='font-light m-auto rale tracking-wide text-sm text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>
                     Lorem ipsum dolor sit amet, consectetur consecteturconsectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid
                 </p>

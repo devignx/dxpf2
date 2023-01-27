@@ -14,7 +14,7 @@ import Cards from '../components/Cards'
 const Home = () => {
 
     const card = [
-        {"title":"Metaswap","desc":"A Futuristic UI concept for a crypto product, that can swap crypto tokens for you.", "live":"https://metaswapp.vercel.app"},
+        {"title":"Metaswap","desc":"A Futuristic UI concept for a crypto product, that can swap crypto currency tokens for the frens", "live":"https://metaswapp.vercel.app"},
         {"title":"Vongo","desc":"Vongo.ai is a library of Audiobooks, Videos, PDFs and so many useful resources for Medical Students studying under Incus.inc organisation", "live":"https://vongo.ai"},
         {"title":"Betterfeeds","desc":"A company website for Betterfeeds to showcase & market their products in a creative way", "live":"https://betterfeeds.vercel.app"},
         {"title":"DevignX","desc":"Devignx is a group of technologists & designers building beautifully designed websites with a great UX for Everyone", "live":"https://devignx.hariprasd.me"},
@@ -25,7 +25,7 @@ const Home = () => {
 
     return(
 
-        <div className='text-white overflow-x-hidden'>
+        <div className='text-white overflow-x-hidden snap-y'>
             <img className='pc absolute md:mt-0 select-none pointer-events-none h-screen object-contain bottt w-screen m-auto bg-cover' alt='' src={bg} />
             <img className='mob absolute md:mt-0 select-none pointer-events-none h-screen object-contain bottt w-screen m-auto bg-cover' alt='' src={bgmob} />
 
@@ -43,7 +43,7 @@ const Home = () => {
                 <a href='#info' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>I</span>nfo</a>
             </motion.div>
 
-            <div id='home' className='h-screen relative'> 
+            <div id='home' className='h-screen relative snap-start'> 
                 {/*<img className=' absolute rotate-45 w-[15rem] -top-1/5' alt='' src={fram} /> */}
                 <div className='absolute flex flex-col h-full justify-center m-auto w-full -mt-16'>
                     <h1 className="text-center dmser text-[3rem] md:text-[4rem] leading-tight text-white">Hari Prasad</h1>
@@ -59,7 +59,7 @@ const Home = () => {
             initial={{opacity:0.2}}
             whileInView={{opacity:1}}
             transition={{duration:0.7}}
-            className='relative h-screen w-full mt-[10%] pt-12'>
+            className='relative h-screen w-full mt-[10%] pt-12 snap-start'>
                 <a href='#about' className="text-center text-white uppercase block font-black text-2xl md">About</a>
                 <p className='font-light m-auto rale tracking-wide text-sm text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>
                     The Designs I've created are used worldwide by lakhs of users. As a developer I have create a few websites 
@@ -85,40 +85,57 @@ const Home = () => {
             initial={{opacity:0.2}}
             whileInView={{opacity:1}}
             transition={{duration:0.7}}
-            className='h-screen relative w-full bg-white/[0.9] text-black pt-12'>
+            className='h-screen relative flex flex-col w-full bg-white/[0.9] text-black pt-12 snap-start'>
                 <a href='#recent' className="text-center text-black uppercase block font-black text-2xl my-4">Recent Projects</a>
-                <p className='font-light m-auto rale font-medium tracking-wide text-sm text-slate-600 mt-4 w-10/12 md:w-[68%] text-center'>
+                <p className='font-light m-auto rale font-medium tracking-wide text-sm text-slate-600 mt-4 mb-12 w-10/12 md:w-[68%] text-center'>
                     The Designs I've created are used worldwide by lakhs of users. As a Front-End-Developer I have created a few websites, that showcases my skills in Design & UX
                 </p>
 
-                <section className='overflow-y-scroll bg-transparent mt- md:mt-12 px-2 md:p-4 h-[60%] md:h-2/3 w-11/12 md:w-1/2 m-auto centerh absolute bottom-0 snap-proximity snap-y'>
-                    <div className='bg-black/90 hover:bg-black transition-all duration-500 ease-in-out relative m-auto drop-shadow-xl cursor-pointer mb-8 rounded-xl p-8 md:p-12 hover:md:p-14 overflow-hidden snap-start '>
-                        <h2 className='text-white transition-all duration-500 ease-in-out uppercase rale block font-black text-xl'>Design Projects</h2>
-                        <img className='absolute bottt rotate-[70deg] scale-[120%] -right-12' src={fram} />
-                        <img className='absolute bottt rotate-[110deg] opacity-30 scale-[110%] -right-12' src={fram} />
-                        <p className='mt-2 w-11/12 transition-all duration-500 text-white/60 font-thin md:font-medium text-sm'>I have created a folder of all my designs in Google drive, It is the archive of all my creations, Click the link to open the Drive Folder</p>
-                        <abbr title="Open the live version in a new tab"><a target='_blank' href="https://drive.google.com/drive/folders/14ikSuvyYcKh3odfntSc-SAc77GHmYFGX?usp=share_link" className='bg-white p-8 md:p-9 pt-3 md:pt-4 pr-12 md:pr-16 absolute text-center -right-8 -bottom-6 transition-all duration-300 ease-in-out text-black  hover:bg-white rounded-full '>View ↗</a></abbr>
-                    </div>
+                <div className=' w-11/12 m-auto md:w-1/2 h-full overflow-y-scroll snap-normal snap-y'>
+
+                    <section className='bg-transparent absolute bottom-0 px-2 md:p-4 relative m-auto h-full '>
+
+                        <div className='bg-black/90 hover:bg-black transition-all duration-500 ease-in-out relative m-auto drop-shadow-xl cursor-pointer mb-8 rounded-xl p-8 md:p-12 hover:md:p-14 delay-300 overflow-hidden snap-start '>
+                            <h2 className='text-white transition-all duration-500 ease-in-out uppercase rale block font-black text-xl'>Design Projects</h2>
+                            <motion.div
+                                className='origin-center'
+                                initial={{y:0, x:0, rotateY:0, scale:1}}
+                                animate={{y:[50,0,50], x:[20,0,20],rotateY:[0,50,0], scale:[1, 1.5, 1]}}
+                                transition={{ repeatType:"loop",ease:"linear", repeat: Infinity, duration:10 }}>
+                                <img className='absolute bottt origin-center rotate-[70deg] scale-[120%] -right-12' src={fram} />
+                                <img className='absolute bottt origin-center rotate-[110deg] opacity-30 scale-[110%] -right-16' src={fram} />
+                            </motion.div>
+                            <p className='mt-2 w-11/12 transition-all duration-500 text-white/60 font-thin md:font-medium text-sm'>I have created a folder of all my designs in Google drive, It is the archive of all my creations, Click the link to open the Drive Folder</p>
+                            <abbr title="Open the live version in a new tab"><a target='_blank' href="https://drive.google.com/drive/folders/14ikSuvyYcKh3odfntSc-SAc77GHmYFGX?usp=share_link" className='bg-white p-8 md:p-9 pt-3 md:pt-4 pr-12 md:pr-16 absolute text-center -right-8 -bottom-6 transition-all duration-300 ease-in-out text-black  hover:bg-white rounded-full '>View ↗</a></abbr>
+                        </div>
+                        {/*<p className='text-center text-black uppercase block font-black text-xl mb-8'>Projects as a Developer ↓</p> */}
+
                         {
                             card.map((card, index) => {
                                 return <Cards key={index} desc={card.desc} title={card.title} live={card.live} repo={card.repo}/>
                             })
                         }
-                </section>
+                        
+                        <br/>
+
+                    </section>
+                    
+                </div>
 
                 <motion.img
                 initial={{y:50}}
                 whileInView={{ y:0}}
                 transition={{duration:0.7}}
                 viewport={{once:false}}
-                className='w-[3rem] md:w-[10rem]  absolute bottom-0 right-0' src={divid}/>
-
+                className='w-[3rem] toppp md:w-[10rem]  absolute bottom-0 right-0' src={divid}/>
+                
                 <motion.img
                 initial={{y:50,rotateY:180}}
                 whileInView={{ y:0,rotateY:180}}
                 transition={{duration:0.7}}
                 viewport={{once:false}}
                 className='w-[3rem] md:w-[10rem]  absolute bottom-0 left-0' src={divid}/>
+
             </motion.div>
             
 
@@ -126,7 +143,7 @@ const Home = () => {
             initial={{opacity:0.2}}
             whileInView={{opacity:1}}
             transition={{duration:0.7}}
-            className='h-screen w-full pt-12'>
+            className='h-screen w-full bg-[#0B0D13] pt-12 snap-start'>
                 <a href='#info' className="text-center text-white uppercase block my-4 font-black text-2xl md">Info</a>
                 <p className='font-light m-auto rale tracking-wide text-sm text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>
                     Lorem ipsum dolor sit amet, consectetur consecteturconsectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid

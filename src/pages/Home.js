@@ -1,4 +1,4 @@
-import avatar from '../assets/hp-ai-clr.gif'
+import avatar from '../assets/hp-ai-clr.mp4'
 import stik from '../assets/stik.svg'
 import bg from '../assets/bg.webp'
 import bgmob from '../assets/bg-mob.webp'
@@ -72,7 +72,13 @@ const Home = () => {
                     className='text-center rale font-light tracking-wide text-sm md:text-lg text-slate-400 mt-3'>Artist • Designer • Developer</motion.p>
                 </motion.div>
                 <div className='absolute bottom-9 md:bottom-0'>
-                    <abbr title='AI Generated avatars of Hari Prasad'><a className=' w-min' aria-label='link to next section' href='#about'><img className='m-auto border-white border-4 select-none grayscale hover:filter-none rounded-full w-[8rem] md:w-[7rem] scaleup' alt='' src={avatar} /></a></abbr>
+                    <abbr title='AI Generated avatars of Hari Prasad'>
+                        <div>
+                            <video className='m-auto border-white border-4 select-none grayscale hover:filter-none rounded-full w-[8rem] md:w-[7rem] scaleup' alt='' 
+                            width="250" height="250" autoPlay loop playsInline muted ><source src={avatar} type="video/mp4"/>
+                            </video>
+                        </div>
+                    </abbr>
                     <img className='m-auto select-none pointer-events-none w-screen h-12 md:h-auto  transition-all duration-500 ease-in-out' alt='' src={stik} />
                 </div>
             </div>
@@ -89,14 +95,18 @@ const Home = () => {
                     <span className='text-green-400 text-xl mb-[2px] font-black'>• </span>
                     <abbr title='Currently studying for exams' className=''>Current Status : <span className='text-white'>Exam prep 😭</span></abbr>
                 </div>
-                <img className='opacity-60 md:opacity-30 noselect bg-repeat-x w-screen  grayscale mt-6 '  alt='' src={stuf} />
+                <motion.img
+                initial={{scaleY:0}}
+                whileInView={{scaleY:1}}
+                transition={{duration:0.3}}
+                className='select-none  transition-all duration-500 ease-in-out bg-repeat-x w-screen mt-6 grayscale hover:filter-none'  alt='' src={stuf} />
                 <p className='mt-8 text-sm md:text-[1rem] leading-relaxed  font-thin rale text-slate-400 text-center m-auto w-10/12 md:w-1/2 '>I am interested in roles like <span className='font-medium'>Product Designer, UIUX Designer, Creative Designer, Front-End-Developer, Web designer, Graphic Designer, Visual Designer etc.</span><br/> These two documents speak a lot about my experiences & skillsets.</p>
                 <div className='flex flex-col w-auto mt-12 gap-8 justify-center items-center'>
                         <a href='https://drive.google.com/file/d/1wqLiEmBD8CkBseNNqc7c00-WbuliD4-V/view' target='_blank' rel='noreferrer' className='px-8 py-4 hover:py-6 hover:px-10 transition-all duration-500 ease-in-out bg-white/90 hover:bg-white text-black rounded-full w-auto'>Resume ↗</a>
                         <a href='https://github.com/hariprasd/hariprasd/blob/main/coverletter.md' target='_blank' rel='noreferrer' className='px-8 py-4 hover:py-6 hover:px-10 transition-all duration-500 ease-in-out bg-white/90 hover:bg-white text-black rounded-full w-auto'>Coverletter ↗</a>
                 </div>
 
-                <a href='#recent'  aria-label='link to next section'><img className='m-auto absolute bottom-4 md:bottom-8 centerh h-[1.4rem] md:h-[2rem]' alt='' src={scroll} /></a>
+                <a href='#recent'  aria-label='link to next section'><img className='m-auto absolute bottom-8 centerh h-[2rem]' alt='' src={scroll} /></a>
                 
                 <motion.img
                 initial={{y:50, opacity:0}}

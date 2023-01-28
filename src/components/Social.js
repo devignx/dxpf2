@@ -19,7 +19,7 @@ const Social = () => {
                 <a target="_blank" rel="noreferrer" href='https://twitter.com/haripras_d'><img className='w-[2rem] scaleup' src={twt} alt='social'></img></a>
                 <a target="_blank" rel="noreferrer" href='mailto:harimohan0502@gmail.com'><img className='w-[2rem] scaleup' src={mail} alt='social'></img></a>
             </div>
-            <p className='text-slate-300 mt-2 text-center w-10/12 text-xs font-thin'>Check out the 2022 version of my Portfolio<a className='text-white underline' target="_blank" rel="noreferrer" href='https://2022.hariprasd.me'>2022 ↗</a></p>
+            <p className='text-slate-300 mt-2 text-center w-10/12 text-xs font-thin'>Check out the 2022 version of my Portfolio <a className='text-white underline' target="_blank" rel="noreferrer" href='https://2022.hariprasd.me'>2022↗</a></p>
         </div>
         </div>
     )

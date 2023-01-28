@@ -10,6 +10,7 @@ import divid from '../assets/divi-d.svg'
 import stuf from '../assets/stuf.svg'
 
 import Cards from '../components/Cards'
+import Social from '../components/Social'
 
 
 const Home = () => {
@@ -37,7 +38,7 @@ const Home = () => {
                 whileHover={{x:0, y:0, scale:1}}
                 transition={{ duration: 0.4, type:'spring'}}
                 exit={{duration:1.5}}
-                className='pc fixed toppp flex flex-col dmser tracking-wide pb-12 pt-16 pr-24 pl-16 mt-4 gap-6 top-8 mix-blend-difference right-0 hover:-right-2 rounded-2xl bg-white/[.08] hover:bg-white/[.03] text-slate-400 backdrop-blur-2xl border-white/10 border-solid border-[0.6px] drop-shadow-xl'>
+                className='pc fixed topppp flex flex-col dmser tracking-wide pb-12 pt-16 pr-24 pl-16 mt-4 gap-6 top-8 mix-blend-difference right-0 hover:-right-2 rounded-2xl bg-white/[.08] hover:bg-white/[.03] text-slate-400 backdrop-blur-2xl border-white/10 border-solid border-[0.6px] drop-shadow-xl'>
                 <p className='w-[12rem] centerh -mt-12 text-[0.5rem] text-white/40 rale text-center absolute'>No way you found this <span className='text-white'>O_O</span>. Anyways. Shhhh! Don't say to anyone</p>
                 <a href='#home' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>H</span>ome</a>
                 <a href='#about' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>A</span>bout</a>
@@ -47,14 +48,29 @@ const Home = () => {
             </motion.div>
 
             <div id='home' className='h-screen relative snap-start'> 
-                {/*<img className=' absolute rotate-45 w-[15rem] -top-1/5' alt='' src={fram} /> */}
-                <div className='absolute flex flex-col h-full justify-center m-auto w-full -mt-16'>
-                    <h1 className="text-center dmser text-[3rem] md:text-[4rem] leading-tight text-white">Hari Prasad</h1>
-                    <p className='text-center rale font-light tracking-wide text-sm md:text-lg text-slate-400 mt-3'>Artist • Designer • Developer</p>
-                </div>
+                <motion.div
+                className='absolute flex flex-col h-full justify-center m-auto w-full -mt-16'>
+                    <motion.div 
+                    initial={{scaleY:0}}
+                    animate={{scaleY:1}}
+                    whileHover={{skewX:-3.4, transition:{duration:0.4}}}
+                    transition={{duration:1}}
+                    className='overflow-hidden p-0 '>
+                        <motion.h1
+                        initial={{y:30, opacity:0}}
+                        whileInView={{y:0, opacity:1}}
+                        transition={{duration:1.3}}
+                        className="text-center dmser text-[3rem] md:text-[4rem] leading-tight text-white">Hari Prasad</motion.h1>
+                    </motion.div>
+                    <motion.p
+                    initial={{y:10, opacity:0}}
+                    whileInView={{y:0, opacity:1}}
+                    transition={{duration:0.9, delay:0.3}}
+                    className='text-center rale font-light tracking-wide text-sm md:text-lg text-slate-400 mt-3'>Artist • Designer • Developer</motion.p>
+                </motion.div>
                 <div className='absolute bottom-9 md:bottom-0'>
                     <abbr title='AI Generated avatars of Hari Prasad'><a className=' w-min' href='#about'><img className='m-auto border-white border-4 select-none grayscale hover:filter-none rounded-full w-[8rem] md:w-[7rem] scaleup' alt='' src={avatar} /></a></abbr>
-                    <img className='m-auto select-none pointer-events-none w-screen h-12 md:h-auto ' alt='' src={stik} />
+                    <img className='m-auto select-none pointer-events-none w-screen h-12 md:h-auto  transition-all duration-500 ease-in-out' alt='' src={stik} />
                 </div>
             </div>
 
@@ -68,12 +84,15 @@ const Home = () => {
                 className="text-center text-white uppercase block toppp font-black text-2xl md">About</motion.a>
                 {/**<p className='font-light m-auto rale tracking-wide text-sm text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>The Designs I've created are used worldwide by lakhs of users. As a developer I have create a few websites</p>
                  */}
-                <a className='text-xs p-3 px-5 bg-white/[0.05] text-slate-400 block m-auto w-fit mt-4 text-center rounded-full'>Current Status : <span className='text-white'>Exam prep 😭</span></a>
-                <img className='opacity-60 md:opacity-30 noselect bg-repeat-x w-screen  grayscale mt-6 md:mt-0'  alt='' src={stuf} />
-                <p className='mt-8 text-sm md:text-[1rem] leading-relaxed  font-thin rale text-slate-400 text-center m-auto w-10/12 md:w-1/2 '>I am interested in roles like Product Designer, UIUX Designer, Creative Designer, Front-End-Developer, Web designer, Graphic Designer, Visual Designer etc.<br/> These two documents speak a lot about me.</p>
+                <div className='text-xs p-1 px-5 bg-white/[0.05] flex justify-center items-center gap-1  text-slate-400 block m-auto w-fit mt-6 text-center align-center rounded-full'>
+                    <span className='text-green-400 text-xl mb-[2px] font-black'>• </span>
+                    <abbr title='Currently studying for exams' className=''>Current Status : <span className='text-white'>Exam prep 😭</span></abbr>
+                </div>
+                <img className='opacity-60 md:opacity-30 noselect bg-repeat-x w-screen  grayscale mt-6 '  alt='' src={stuf} />
+                <p className='mt-8 text-sm md:text-[1rem] leading-relaxed  font-thin rale text-slate-400 text-center m-auto w-10/12 md:w-1/2 '>I am interested in roles like <span className='font-medium'>Product Designer, UIUX Designer, Creative Designer, Front-End-Developer, Web designer, Graphic Designer, Visual Designer etc.</span><br/> These two documents speak a lot about my experiences & skillsets.</p>
                 <div className='flex flex-col w-auto mt-12 gap-8 justify-center items-center'>
-                        <a href='https://drive.google.com/file/d/1wqLiEmBD8CkBseNNqc7c00-WbuliD4-V/view' target='_blank' rel='noreferrer' className='px-8 py-4 hover:py-6 hover:px-10 transition-all duration-500 ease-in-out bg-white text-black rounded-full w-auto'>Resume ↗</a>
-                        <a href='https://github.com/hariprasd/hariprasd/blob/main/coverletter.md' target='_blank' rel='noreferrer' className='px-8 py-4 hover:py-6 hover:px-10 transition-all duration-500 ease-in-out bg-white text-black rounded-full w-auto'>Coverletter ↗</a>
+                        <a href='https://drive.google.com/file/d/1wqLiEmBD8CkBseNNqc7c00-WbuliD4-V/view' target='_blank' rel='noreferrer' className='px-8 py-4 hover:py-6 hover:px-10 transition-all duration-500 ease-in-out bg-white/90 hover:bg-white text-black rounded-full w-auto'>Resume ↗</a>
+                        <a href='https://github.com/hariprasd/hariprasd/blob/main/coverletter.md' target='_blank' rel='noreferrer' className='px-8 py-4 hover:py-6 hover:px-10 transition-all duration-500 ease-in-out bg-white/90 hover:bg-white text-black rounded-full w-auto'>Coverletter ↗</a>
                 </div>
                 
                 <motion.img
@@ -81,14 +100,14 @@ const Home = () => {
                 whileInView={{ y:0, opacity:0.9 }}
                 transition={{duration:0.7}}
                 viewport={{once:false}}
-                className='w-[3rem] md:w-[10rem] opacity-[0.9] absolute bottom-0 right-0' src={divi}/>
+                className='w-[3rem] md:w-[10rem] bottt opacity-[0.9] absolute bottom-0 right-0 noselect ' src={divi}/>
 
                 <motion.img
                 initial={{y:50,rotateY:180, opacity:0}}
                 whileInView={{ y:0,rotateY:180, opacity:0.9 }}
                 transition={{duration:0.7}}
                 viewport={{once:false}}
-                className='w-[3rem] md:w-[10rem] opacity-[0.9] absolute bottom-0 left-0' src={divi}/>
+                className='w-[3rem] md:w-[10rem] bottt opacity-[0.9] absolute bottom-0 left-0 noselect ' src={divi}/>
             </motion.div>
 
 
@@ -103,23 +122,27 @@ const Home = () => {
                     The Designs I've created are used worldwide by lakhs of users. As a Front-End-Developer I have created a few websites, that showcases my skills in Design & UX
                 </p>
 
-                <div className=' w-11/12 m-auto md:w-1/2 h-full overflow-y-scroll snap-normal snap-y'>
+                <div className=' w-11/12 m-auto md:w-1/2 h-full overflow-y-scroll snap-normal snap-proximity scroll-smooth snap-y'>
 
                     <section className='bg-transparent absolute bottom-0 px-2 md:p-4 relative m-auto h-full '>
 
-                        <div className='bg-black/90 hover:bg-black transition-all duration-500 ease-in-out relative m-auto drop-shadow-xl cursor-pointer mb-8 rounded-xl p-8 md:p-12 hover:md:p-14 delay-300 overflow-hidden snap-start '>
+                        <motion.div
+                        initial={{opacity: 0}}
+                        whileInView={{opacity: 1}}
+                        transition={{duration: 1}}
+                        className='bg-black/90 hover:bg-black transition-all duration-500 ease-in-out relative m-auto drop-shadow-xl cursor-pointer mb-8 rounded-xl p-8 md:p-12 hover:md:p-14 delay-300 overflow-hidden snap-start '>
                             <h2 className='text-white transition-all duration-500 ease-in-out uppercase rale block font-black text-xl'>Design Projects</h2>
                             <motion.div
                                 className='origin-center'
-                                initial={{y:0, x:0, rotateY:0, scale:1}}
-                                animate={{y:[50,0,50], x:[20,0,20],rotateY:[0,50,0], scale:[1, 1.5, 1]}}
-                                transition={{ repeatType:"loop",ease:"linear", repeat: Infinity, duration:10 }}>
+                                initial={{y:0, x:0, rotateZ:0, scale:1}}
+                                animate={{y:[50,0,50], x:[20,0,20],rotateZ:[0,10,0], scale:[1, 1.5, 1]}}
+                                transition={{ repeatType:"loop",ease:"easeInOut", repeat: Infinity, duration:10 }}>
                                 <img className='absolute bottt origin-center rotate-[70deg] scale-[120%] -right-12'  alt='' src={fram} />
-                                <img className='absolute bottt origin-center rotate-[110deg] opacity-30 scale-[110%] -right-16' alt='' src={fram} />
+                                <img className='absolute bottt origin-center rotate-[110deg] blur-[2px] opacity-60 scale-[110%] -right-16' alt='' src={fram} />
                             </motion.div>
                             <p className='mt-2 w-11/12 transition-all duration-500 text-white/60 font-thin md:font-medium text-sm md:text-[1rem] leading-relaxed'>I have created a folder of all my designs in Google drive, It is the archive of all my creations, Click the link to open the Drive Folder</p>
                             <abbr title="Open the live version in a new tab"><a target='_blank' rel="noreferrer"  href="https://drive.google.com/drive/folders/14ikSuvyYcKh3odfntSc-SAc77GHmYFGX?usp=share_link" className='bg-white p-8 md:p-9 pt-3 md:pt-4 pr-12 md:pr-16 absolute text-center -right-8 -bottom-6 transition-all duration-300 ease-in-out text-black  hover:bg-white rounded-full '>View ↗</a></abbr>
-                        </div>
+                        </motion.div>
                         {/*<p className='text-center text-black uppercase block font-black text-xl mb-8'>Projects as a Developer ↓</p> */}
 
                         {
@@ -139,14 +162,14 @@ const Home = () => {
                 whileInView={{ y:0}}
                 transition={{duration:0.7}}
                 viewport={{once:false}}
-                className='w-[3rem] toppp md:w-[10rem]  absolute bottom-0 right-0' src={divid}/>
+                className='w-[3rem] toppp md:w-[10rem] z-[-110] absolute bottom-0 right-0 noselect ' src={divid}/>
                 
                 <motion.img
                 initial={{y:50,rotateY:180}}
                 whileInView={{ y:0,rotateY:180}}
                 transition={{duration:0.7}}
                 viewport={{once:false}}
-                className='w-[3rem] md:w-[10rem]  absolute bottom-0 left-0' src={divid}/>
+                className='w-[3rem] md:w-[10rem] absolute bottom-0 left-0 noselect ' src={divid}/>
 
             </div>
             
@@ -159,8 +182,15 @@ const Home = () => {
                 transition={{duration:0.7}}
                 href='#info' className="text-center text-white uppercase block my-4 font-black text-2xl md">Info</motion.a>
                 <p className='font-light m-auto rale tracking-wide text-sm md:text-[1rem] leading-relaxed text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>
-                    Working<br/>Lorem ipsum dolor sit amet, consectetur consecteturconsectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incid
+                    I'd love to join any remote organisations that value my skills. Contact me, If you want me to
                 </p>
+                <ul className='text-center leading-loose mt-6'>
+                    <li>Design or redesign an App or Website</li>
+                    <li>Develop a Site's frontend</li>
+                    <li>Become a friend / coworker</li>
+                    <li>Come to your country(Sponsorship Required)</li>
+                </ul>
+                <Social />
             </div>
         </div>
     )

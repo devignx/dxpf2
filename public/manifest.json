@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+    "name": "Hari Prasad • Creative Designer & Front-End Dev ",
+    "short_name": "Hari Prasad's Protfolio",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0B0D13",
+    "description": "Hari Prasad's Designer Portfolio",
+    "icons": [{
+      "src": "favicon.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    }, {
+      "src": "favicon.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    }]
+  }
+  

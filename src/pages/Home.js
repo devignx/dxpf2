@@ -81,7 +81,7 @@ const Home = () => {
             className='relative h-screen w-full mt-[10%] pt-12 snap-start'>
                 <motion.a
                 href='#about' 
-                initial={{opacity:0.2}}
+                initial={{opacity:0}}
                 whileInView={{opacity:1}}
                 transition={{duration:0.7}}
                 className="text-center text-white uppercase block toppp font-black text-2xl md">About</motion.a>
@@ -117,7 +117,7 @@ const Home = () => {
             <div id='recent'
             className='h-screen relative flex flex-col w-full bg-white/[0.9] text-black pt-12 snap-start'>
                 <motion.a
-                initial={{opacity:0.2}}
+                initial={{opacity:0}}
                 whileInView={{opacity:1}}
                 transition={{duration:0.7}}
                 href='#recent' className="text-center text-black uppercase block font-black text-2xl my-4">Recent Projects</motion.a>
@@ -180,7 +180,7 @@ const Home = () => {
             <div id='info'
             className='h-screen w-full bg-[#0B0D13] relative pt-12 snap-start'>
                 <motion.a 
-                initial={{opacity:0.2}}
+                initial={{opacity:0}}
                 whileInView={{opacity:1}}
                 transition={{duration:0.7}}
                 href='#info' className="text-center text-white uppercase block my-4 font-black text-2xl md">Info</motion.a>

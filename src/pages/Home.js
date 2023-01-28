@@ -4,17 +4,20 @@ import bg from '../assets/bg.webp'
 import bgmob from '../assets/bg-mob.webp'
 import fram from '../assets/frame.svg'
 import '../index.css'
-import { motion } from 'framer-motion'
 import divi from '../assets/divi.svg'
 import divid from '../assets/divi-d.svg'
 import stuf from '../assets/stuf.svg'
+import scroll from '../assets/scroll.svg'
 
 import Cards from '../components/Cards'
 import Social from '../components/Social'
 
+import { motion } from 'framer-motion'
+
 
 const Home = () => {
-
+    
+    
     const card = [
         {"title":"Metaswap","desc":"A Futuristic UI concept for a crypto product, that can swap crypto currency tokens for the frens", "live":"https://metaswapp.vercel.app"},
         {"title":"Vongo","desc":"Vongo.ai is a library of Audiobooks, Videos, PDFs and so many useful resources for Medical Students studying under Incus.inc organisation", "live":"https://vongo.ai"},
@@ -40,10 +43,10 @@ const Home = () => {
                 exit={{duration:1.5}}
                 className='pc fixed topppp flex flex-col dmser tracking-wide pb-12 pt-16 pr-24 pl-16 mt-4 gap-6 top-8 mix-blend-difference right-0 hover:-right-2 rounded-2xl bg-white/[.08] hover:bg-white/[.03] text-slate-400 backdrop-blur-2xl border-white/10 border-solid border-[0.6px] drop-shadow-xl'>
                 <p className='w-[12rem] centerh -mt-12 text-[0.5rem] text-white/40 rale text-center absolute'>No way you found this <span className='text-white'>O_O</span>. Anyways. Shhhh! Don't say to anyone</p>
-                <a href='#home' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>H</span>ome</a>
-                <a href='#about' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>A</span>bout</a>
-                <a href='#recent' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>R</span>ecent</a>
-                <a href='#info' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>I</span>nfo</a>
+                <a href='#home' aria-label='Home Page' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>H</span>ome</a>
+                <a href='#about' aria-label='About' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>A</span>bout</a>
+                <a href='#recent'aria-label='Recent' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>R</span>ecent</a>
+                <a href='#info' aria-label='Info' className='hover:text-white transition-all duration-500 ease-in-out'><span className='text-3xl font-bold italic text-white'>I</span>nfo</a>
                 <p className='w-[12rem] centerh -mt-10 text-[0.5rem] text-white/40 rale bottom-3 centerh text-center isolate absolute'>you must be one <span className='text-white text-[.5rem]'>Keen observer ^_~</span></p>
             </motion.div>
 
@@ -69,7 +72,7 @@ const Home = () => {
                     className='text-center rale font-light tracking-wide text-sm md:text-lg text-slate-400 mt-3'>Artist • Designer • Developer</motion.p>
                 </motion.div>
                 <div className='absolute bottom-9 md:bottom-0'>
-                    <abbr title='AI Generated avatars of Hari Prasad'><a className=' w-min' href='#about'><img className='m-auto border-white border-4 select-none grayscale hover:filter-none rounded-full w-[8rem] md:w-[7rem] scaleup' alt='' src={avatar} /></a></abbr>
+                    <abbr title='AI Generated avatars of Hari Prasad'><a className=' w-min' aria-label='link to next section' href='#about'><img className='m-auto border-white border-4 select-none grayscale hover:filter-none rounded-full w-[8rem] md:w-[7rem] scaleup' alt='' src={avatar} /></a></abbr>
                     <img className='m-auto select-none pointer-events-none w-screen h-12 md:h-auto  transition-all duration-500 ease-in-out' alt='' src={stik} />
                 </div>
             </div>
@@ -82,8 +85,6 @@ const Home = () => {
                 whileInView={{opacity:1}}
                 transition={{duration:0.7}}
                 className="text-center text-white uppercase block toppp font-black text-2xl md">About</motion.a>
-                {/**<p className='font-light m-auto rale tracking-wide text-sm text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>The Designs I've created are used worldwide by lakhs of users. As a developer I have create a few websites</p>
-                 */}
                 <div className='text-xs p-1 px-5 bg-white/[0.05] flex justify-center items-center gap-1  text-slate-400 block m-auto w-fit mt-6 text-center align-center rounded-full'>
                     <span className='text-green-400 text-xl mb-[2px] font-black'>• </span>
                     <abbr title='Currently studying for exams' className=''>Current Status : <span className='text-white'>Exam prep 😭</span></abbr>
@@ -94,20 +95,22 @@ const Home = () => {
                         <a href='https://drive.google.com/file/d/1wqLiEmBD8CkBseNNqc7c00-WbuliD4-V/view' target='_blank' rel='noreferrer' className='px-8 py-4 hover:py-6 hover:px-10 transition-all duration-500 ease-in-out bg-white/90 hover:bg-white text-black rounded-full w-auto'>Resume ↗</a>
                         <a href='https://github.com/hariprasd/hariprasd/blob/main/coverletter.md' target='_blank' rel='noreferrer' className='px-8 py-4 hover:py-6 hover:px-10 transition-all duration-500 ease-in-out bg-white/90 hover:bg-white text-black rounded-full w-auto'>Coverletter ↗</a>
                 </div>
+
+                <a href='#recent'  aria-label='link to next section'><img className='m-auto absolute bottom-4 md:bottom-8 centerh h-[1.4rem] md:h-[2rem]' alt='' src={scroll} /></a>
                 
                 <motion.img
                 initial={{y:50, opacity:0}}
                 whileInView={{ y:0, opacity:0.9 }}
                 transition={{duration:0.7}}
                 viewport={{once:false}}
-                className='w-[3rem] md:w-[10rem] bottt opacity-[0.9] absolute bottom-0 right-0 noselect ' src={divi}/>
+                className='w-[3rem] md:w-[10rem] bottt opacity-[0.9] absolute bottom-0 right-0 noselect ' alt='' src={divi}/>
 
                 <motion.img
                 initial={{y:50,rotateY:180, opacity:0}}
                 whileInView={{ y:0,rotateY:180, opacity:0.9 }}
                 transition={{duration:0.7}}
                 viewport={{once:false}}
-                className='w-[3rem] md:w-[10rem] bottt opacity-[0.9] absolute bottom-0 left-0 noselect ' src={divi}/>
+                className='w-[3rem] md:w-[10rem] bottt opacity-[0.9] absolute bottom-0 left-0 noselect ' alt='' src={divi}/>
             </motion.div>
 
 
@@ -162,27 +165,27 @@ const Home = () => {
                 whileInView={{ y:0}}
                 transition={{duration:0.7}}
                 viewport={{once:false}}
-                className='w-[3rem] toppp md:w-[10rem] z-[-110] absolute bottom-0 right-0 noselect ' src={divid}/>
+                className='w-[3rem] toppp md:w-[10rem] z-[-110] absolute bottom-0 right-0 noselect ' alt='' src={divid}/>
                 
                 <motion.img
                 initial={{y:50,rotateY:180}}
                 whileInView={{ y:0,rotateY:180}}
                 transition={{duration:0.7}}
                 viewport={{once:false}}
-                className='w-[3rem] md:w-[10rem] absolute bottom-0 left-0 noselect ' src={divid}/>
+                className='w-[3rem] md:w-[10rem] absolute bottom-0 left-0 noselect ' alt='' src={divid}/>
 
             </div>
             
 
             <div id='info'
-            className='h-screen w-full bg-[#0B0D13] pt-12 snap-start'>
+            className='h-screen w-full bg-[#0B0D13] relative pt-12 snap-start'>
                 <motion.a 
                 initial={{opacity:0.2}}
                 whileInView={{opacity:1}}
                 transition={{duration:0.7}}
                 href='#info' className="text-center text-white uppercase block my-4 font-black text-2xl md">Info</motion.a>
-                <p className='font-light m-auto rale tracking-wide text-sm md:text-[1rem] leading-relaxed text-slate-400 mt-4 w-10/12 md:w-[68%] text-center'>
-                    I'd love to join any remote organisations that value my skills. Contact me, If you want me to
+                <p className='font-light m-auto rale tracking-wide text-sm md:text-[1rem] leading-relaxed text-slate-400 mt-12 w-10/12 md:w-[68%] text-center'>
+                    I'd love to join or collaborate with any remote organisations that value my skills.<br/><span className='text-white font-medium'> Contact me, If you want me to</span>
                 </p>
                 <ul className='text-center leading-loose mt-6'>
                     <li>Design or redesign an App or Website</li>
@@ -191,6 +194,11 @@ const Home = () => {
                     <li>Come to your country(Sponsorship Required)</li>
                 </ul>
                 <Social />
+                <button
+                className='px-5 py-2 transition-all duration-500 ease-in-out bg-white/10 rounded-full absolute bottom-8 centerh hover:bg-transparent '
+                onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+                Back to top ↑
+                </button>
             </div>
         </div>
     )

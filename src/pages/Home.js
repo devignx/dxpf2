@@ -25,7 +25,9 @@ const Home = () => {
         {"title":"DevignX","desc":"Devignx is a group of technologists & designers building beautifully designed websites with a great UX for Everyone", "live":"https://devignx.hariprasd.me"},
         {"title":"Kalpathy Shivan Temple","desc":"The official Website of Kalpathy Shivan Temple, most beautiful Temple webite you'll ever see", "live":"https://kalpathysvsvsd.com"},
         {"title":"SAGA22","desc":"SAGA22 is the annual tech fest of Ahalia School of Engineering & Technology, this website contains every information about the event", "live":"https://saga22.vercel.app"},
-        {"title":"SPOT","desc":"Spot is a software project that allows users to form a group chat with the help of their mobile hotspot & wifi", "live":"https://spotdx.vercel.app"},
+        {"title":"SP•T","desc":"My academic project, that help users to create chat rooms with the help of WiFi & Hotspot. No useless logins & auths", "live":"https://spotdx.vercel.app"},
+        {"title":"QuotesF5","desc":"A beginner level API project, that generates random Quotes on every refresh. ", "live":"https://quotesf5.hariprasd.me"},
+        {"title":"ASET Pano","desc":"A panoramic 360 experience of My college's Front view using the Panorama Viewer script from Panellium", "live":"https://asetpano.hariprasd.me"},
     ]
 
     return(
@@ -71,10 +73,10 @@ const Home = () => {
                     transition={{duration:0.9, delay:0.3}}
                     className='text-center rale font-light tracking-wide text-sm md:text-lg text-slate-400 mt-3'>Artist • Designer • Developer</motion.p>
                 </motion.div>
-                <div className='absolute bottom-9 md:bottom-0'>
+                <div className='absolute bottom-9 md:bottom-0 transition-all duration-500 ease-in-out'>
                     <abbr title='AI Generated avatars of Hari Prasad'>
                         <div>
-                            <video className='m-auto border-white border-4 select-none grayscale hover:filter-none rounded-full w-[8rem] md:w-[7rem] scaleup' alt='' 
+                            <video className='m-auto transition-all duration-500 ease-in-out border-white border-4 select-none grayscale hover:filter-none rounded-full w-[8rem] md:w-[7rem] scaleup' alt='' 
                             width="250" height="250" autoPlay loop playsInline muted ><source src={avatar} type="video/mp4"/>
                             </video>
                         </div>
@@ -164,8 +166,8 @@ const Home = () => {
                             })
                         }
                         
+                        <a href='#info'  aria-label='link to next section' className=' text-black/50 hover:text-black/80 transition-all duration-500 ease-in-out flex justify-center flex-col-reverse items-center text-sm'>↓ You've Reached the End, Jump to next section ↓</a>
                         <br/>
-
                     </section>
                     
                 </div>
@@ -194,21 +196,25 @@ const Home = () => {
                 whileInView={{opacity:1}}
                 transition={{duration:0.7}}
                 href='#info' className="text-center text-white uppercase block my-4 font-black text-2xl md">Info</motion.a>
-                <p className='font-light m-auto rale tracking-wide text-sm md:text-[1rem] leading-relaxed text-slate-400 mt-12 w-10/12 md:w-[68%] text-center'>
-                    I'd love to join or collaborate with any remote organisations that value my skills.<br/><span className='text-white font-medium'> Contact me, If you want me to</span>
+                <p className='font-light m-auto rale tracking-wide text-sm md:text-[1rem] leading-relaxed text-white mt-12 w-10/12 md:w-[68%] text-center'>
+                    I'd love to join or collaborate with any remote organisations that value my skills.<br/><span className='font-light'> Contact me, If you want me to</span>
                 </p>
-                <ul className='text-center leading-loose mt-6'>
+                <ul className='text-center text-slate-400 leading-loose mt-2'>
+                    <li>↓</li>
                     <li>Design or redesign an App or Website</li>
                     <li>Develop a Site's frontend</li>
                     <li>Become a friend / coworker</li>
                     <li>Come to your country(Sponsorship Required)</li>
+                    <li>↑</li>
                 </ul>
-                <Social />
-                <button
-                className='px-5 py-2 transition-all duration-500 ease-in-out bg-white/10 rounded-full absolute bottom-8 centerh hover:bg-transparent '
-                onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
-                Back to top ↑
-                </button>
+                <div className='my-[3rem]  flex flex-col items-center w-full bottom-8 '>
+                    <Social />
+                    <button
+                    className='px-5 py-2 transition-all duration-500 ease-in-out bg-white/10 rounded-full hover:bg-transparent '
+                    onClick={() => {window.scrollTo({top: 0, left: 0, behavior: 'smooth'});}}>
+                    Back to top ↑
+                    </button>
+                </div>
             </div>
         </div>
     )

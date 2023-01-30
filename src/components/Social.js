@@ -8,8 +8,8 @@ import mail from '../assets/social/mail.svg'
 
 const Social = () => {
     return (
-        <div className='mt-[5rem]'>
-        <div className='flex flex-col gap-5 py-10 mt-3 items-center justify-center '>
+        <div className=''>
+        <div className='flex flex-col gap-5 py-10 items-center justify-center '>
             <div className='flex flex-row gap-4'>
                 <a target="_blank" rel="noreferrer" href='https://instagram.com/haripras.d'><img className='w-[2rem] scaleup' src={ins} alt='social'></img></a>
                 <a target="_blank" rel="noreferrer" href='https://facebook.com/hriprasd'><img className='w-[2rem] scaleup' src={fb} alt='social'></img></a>

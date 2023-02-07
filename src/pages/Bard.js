@@ -32,7 +32,7 @@ const NotFound = () => {
                 <br/>
                 <div className='relative flex items-center mb-12'>
                     <img onClick={handleClickOpen} className='topppp absolute right-[10%] md:right-[28%] w-[3rem] m-auto' src={mic} />
-                    <input onClick={handleClickOpen} type="text" className='rounded-full p-6 bg-white border-solid border-2 border-black/10 drop-shadow-xl m-auto w-[85%] md:w-[40rem] ' disabled placeholder='Ask your questions'></input>
+                    <input onClick={handleClickOpen} type="text" className='rounded-full p-6 bg-white border-solid border-2 border-black/10 drop-shadow-xl m-auto w-[85%] md:w-[40rem] '  placeholder='Ask your questions'></input>
                 </div>
             </div>
             <div  onClick={closePopup} className='fixed topppp'>
